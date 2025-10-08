@@ -11,7 +11,7 @@ RUN apt update && \
 ENV LANG=C.UTF-8
 
 # Add jank source
-RUN curl -s "https://jank-lang.github.io/ppa/KEY.gpg" | gpg --dearmor | tee /etc/apt/trusted.gpg.d/jank.gpg >/dev/null && \
+RUN curl -s "https://ppa.jank-lang.org/KEY.gpg" | gpg --dearmor | tee /etc/apt/trusted.gpg.d/jank.gpg >/dev/null && \
     curl -s -o /etc/apt/sources.list.d/jank.list "https://ppa.jank-lang.org/jank.list"
 
 # Install dependencies and jank
